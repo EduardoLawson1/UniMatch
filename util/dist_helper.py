@@ -5,6 +5,9 @@ import torch
 import torch.distributed as dist
 
 
+print(torch.cuda.is_available())
+
+
 def setup_distributed(backend="nccl", port=None):
     """AdaHessian Optimizer
     Lifted from https://github.com/BIGBALLON/distribuuuu/blob/master/distribuuuu/utils.py
@@ -30,8 +33,9 @@ def setup_distributed(backend="nccl", port=None):
     else:
         rank = int(os.environ["RANK"])
         world_size = int(os.environ["WORLD_SIZE"])
-
+    
     torch.cuda.set_device(rank % num_gpus)
+    torch.cuda.set_device(num_gpus)
 
     dist.init_process_group(
         backend=backend,
