@@ -2,7 +2,7 @@
 dataset: pascal
 nclass: 21
 crop_size: 321
-data_root: Your/Pascal/Path
+data_root: data/voc
 
 # arguments for training
 epochs: 80

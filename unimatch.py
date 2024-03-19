@@ -18,18 +18,19 @@ from util.classes import CLASSES
 from util.ohem import ProbOhemCrossEntropy2d
 from util.utils import count_params, init_log, AverageMeter
 from util.dist_helper import setup_distributed
-
+import wandb
 
 parser = argparse.ArgumentParser(description='Revisiting Weak-to-Strong Consistency in Semi-Supervised Semantic Segmentation')
 parser.add_argument('--config', type=str, required=True)
 parser.add_argument('--labeled-id-path', type=str, required=True)
 parser.add_argument('--unlabeled-id-path', type=str, required=True)
 parser.add_argument('--save-path', type=str, required=True)
-parser.add_argument('--local_rank', default=0, type=int)
+#parser.add_argument('--local_rank', default=0, type=int)
 parser.add_argument('--port', default=None, type=int)
 
 
 def main():
+
     args = parser.parse_args()
 
     cfg = yaml.load(open(args.config, "r"), Loader=yaml.Loader)
@@ -213,6 +214,9 @@ def main():
                 writer.add_scalar('train/loss_s', (loss_u_s1.item() + loss_u_s2.item()) / 2.0, iters)
                 writer.add_scalar('train/loss_w_fp', loss_u_w_fp.item(), iters)
                 writer.add_scalar('train/mask_ratio', mask_ratio, iters)
+                #flag pro wandb das loss
+                wandb.log({"total_loss": total_loss.avg, "total_loss_x": total_loss_x.avg, 
+           "total_loss_s": total_loss_s.avg, "total_loss_w_fp": total_loss_w_fp.avg})
             
             if (i % (len(trainloader_u) // 8) == 0) and (rank == 0):
                 logger.info('Iters: {:}, Total loss: {:.3f}, Loss x: {:.3f}, Loss s: {:.3f}, Loss w_fp: {:.3f}, Mask ratio: '
@@ -224,6 +228,9 @@ def main():
 
         if rank == 0:
             for (cls_idx, iou) in enumerate(iou_class):
+                #flags wandb
+                wandb.log({"iou_class_%s" % (CLASSES[cfg['dataset']][cls_idx]): iou})  # Acompanha o IoU de cada classe
+                wandb.log({"mIoU": mIoU})  # Acompanha o mIoU
                 logger.info('***** Evaluation ***** >>>> Class [{:} {:}] '
                             'IoU: {:.2f}'.format(cls_idx, CLASSES[cfg['dataset']][cls_idx], iou))
             logger.info('***** Evaluation {} ***** >>>> MeanIoU: {:.2f}\n'.format(eval_mode, mIoU))
@@ -247,4 +254,7 @@ def main():
 
 
 if __name__ == '__main__':
+    wandb.init(
+            project="UniMatch"
+        )
     main()
