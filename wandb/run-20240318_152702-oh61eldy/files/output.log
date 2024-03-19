@@ -1,0 +1,155 @@
+Numeros de gpu: 1
+rank = 0
+ gpu =1
+[2024-03-18 15:27:06,103][    INFO] {'backbone': 'resnet101',
+ 'batch_size': 2,
+ 'conf_thresh': 0.95,
+ 'config': 'configs/pascal.yaml',
+ 'criterion': {'kwargs': {'ignore_index': 255}, 'name': 'CELoss'},
+ 'crop_size': 321,
+ 'data_root': 'data/voc',
+ 'dataset': 'pascal',
+ 'dilations': [6, 12, 18],
+ 'epochs': 80,
+ 'labeled_id_path': 'splits/pascal/92/labeled.txt',
+ 'lr': 0.001,
+ 'lr_multi': 10.0,
+ 'model': 'deeplabv3plus',
+ 'nclass': 21,
+ 'ngpus': 1,
+ 'port': 20023,
+ 'replace_stride_with_dilation': [False, False, True],
+ 'save_path': 'exp/pascal/unimatch/r101/92',
+ 'unlabeled_id_path': 'splits/pascal/92/unlabeled.txt'}
+[2024-03-18 15:27:07,724][    INFO] Total params: 59.5M
+[2024-03-18 15:27:10,295][    INFO] ************ Load from checkpoint at epoch 11
+[2024-03-18 15:27:10,295][    INFO] ===========> Epoch: 12, LR: 0.00086, Previous best: 59.19
+[2024-03-18 15:27:20,014][    INFO] Iters: 0, Total loss: 0.025, Loss x: 0.018, Loss s: 0.060, Loss w_fp: 0.005, Mask ratio: 0.795
+[2024-03-18 15:35:16,118][    INFO] Iters: 655, Total loss: 0.044, Loss x: 0.018, Loss s: 0.132, Loss w_fp: 0.007, Mask ratio: 0.828
+[2024-03-18 15:43:06,050][    INFO] Iters: 1310, Total loss: 0.043, Loss x: 0.018, Loss s: 0.131, Loss w_fp: 0.007, Mask ratio: 0.827
+[2024-03-18 15:50:58,709][    INFO] Iters: 1965, Total loss: 0.044, Loss x: 0.018, Loss s: 0.132, Loss w_fp: 0.007, Mask ratio: 0.825
+[2024-03-18 15:58:59,638][    INFO] Iters: 2620, Total loss: 0.044, Loss x: 0.018, Loss s: 0.134, Loss w_fp: 0.007, Mask ratio: 0.824
+[2024-03-18 16:06:45,056][    INFO] Iters: 3275, Total loss: 0.044, Loss x: 0.018, Loss s: 0.133, Loss w_fp: 0.007, Mask ratio: 0.824
+[2024-03-18 16:14:31,432][    INFO] Iters: 3930, Total loss: 0.045, Loss x: 0.022, Loss s: 0.131, Loss w_fp: 0.007, Mask ratio: 0.819
+[2024-03-18 16:22:15,526][    INFO] Iters: 4585, Total loss: 0.045, Loss x: 0.022, Loss s: 0.129, Loss w_fp: 0.007, Mask ratio: 0.820
+[2024-03-18 16:29:59,113][    INFO] Iters: 5240, Total loss: 0.045, Loss x: 0.022, Loss s: 0.129, Loss w_fp: 0.007, Mask ratio: 0.819
+[2024-03-18 16:33:45,516][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 88.51
+[2024-03-18 16:33:45,517][    INFO] ***** Evaluation ***** >>>> Class [1 aeroplane] IoU: 58.38
+[2024-03-18 16:33:45,518][    INFO] ***** Evaluation ***** >>>> Class [2 bicycle] IoU: 50.53
+[2024-03-18 16:33:45,518][    INFO] ***** Evaluation ***** >>>> Class [3 bird] IoU: 0.02
+[2024-03-18 16:33:45,518][    INFO] ***** Evaluation ***** >>>> Class [4 boat] IoU: 54.13
+[2024-03-18 16:33:45,519][    INFO] ***** Evaluation ***** >>>> Class [5 bottle] IoU: 52.88
+[2024-03-18 16:33:45,519][    INFO] ***** Evaluation ***** >>>> Class [6 bus] IoU: 53.80
+[2024-03-18 16:33:45,519][    INFO] ***** Evaluation ***** >>>> Class [7 car] IoU: 60.97
+[2024-03-18 16:33:45,520][    INFO] ***** Evaluation ***** >>>> Class [8 cat] IoU: 2.36
+[2024-03-18 16:33:45,520][    INFO] ***** Evaluation ***** >>>> Class [9 chair] IoU: 12.65
+[2024-03-18 16:33:45,521][    INFO] ***** Evaluation ***** >>>> Class [10 cow] IoU: 59.82
+[2024-03-18 16:33:45,521][    INFO] ***** Evaluation ***** >>>> Class [11 dining table] IoU: 10.80
+[2024-03-18 16:33:45,521][    INFO] ***** Evaluation ***** >>>> Class [12 dog] IoU: 34.28
+[2024-03-18 16:33:45,522][    INFO] ***** Evaluation ***** >>>> Class [13 horse] IoU: 69.15
+[2024-03-18 16:33:45,522][    INFO] ***** Evaluation ***** >>>> Class [14 motorbike] IoU: 12.40
+[2024-03-18 16:33:45,522][    INFO] ***** Evaluation ***** >>>> Class [15 person] IoU: 72.05
+[2024-03-18 16:33:45,523][    INFO] ***** Evaluation ***** >>>> Class [16 potted plant] IoU: 31.84
+[2024-03-18 16:33:45,523][    INFO] ***** Evaluation ***** >>>> Class [17 sheep] IoU: 58.49
+[2024-03-18 16:33:45,523][    INFO] ***** Evaluation ***** >>>> Class [18 sofa] IoU: 13.54
+[2024-03-18 16:33:45,524][    INFO] ***** Evaluation ***** >>>> Class [19 train] IoU: 11.89
+[2024-03-18 16:33:45,524][    INFO] ***** Evaluation ***** >>>> Class [20 tv/monitor] IoU: 49.63
+[2024-03-18 16:33:45,524][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 40.86
+[2024-03-18 16:33:47,415][    INFO] ===========> Epoch: 13, LR: 0.00085, Previous best: 59.19
+[2024-03-18 16:33:48,363][    INFO] Iters: 0, Total loss: 0.032, Loss x: 0.003, Loss s: 0.118, Loss w_fp: 0.005, Mask ratio: 0.787
+[2024-03-18 16:41:34,649][    INFO] Iters: 655, Total loss: 0.044, Loss x: 0.019, Loss s: 0.134, Loss w_fp: 0.007, Mask ratio: 0.824
+[2024-03-18 16:49:18,638][    INFO] Iters: 1310, Total loss: 0.042, Loss x: 0.018, Loss s: 0.126, Loss w_fp: 0.007, Mask ratio: 0.826
+[2024-03-18 16:57:05,129][    INFO] Iters: 1965, Total loss: 0.042, Loss x: 0.018, Loss s: 0.128, Loss w_fp: 0.007, Mask ratio: 0.823
+[2024-03-18 17:04:51,079][    INFO] Iters: 2620, Total loss: 0.042, Loss x: 0.017, Loss s: 0.126, Loss w_fp: 0.007, Mask ratio: 0.825
+[2024-03-18 17:12:36,081][    INFO] Iters: 3275, Total loss: 0.041, Loss x: 0.017, Loss s: 0.125, Loss w_fp: 0.007, Mask ratio: 0.827
+[2024-03-18 17:20:21,494][    INFO] Iters: 3930, Total loss: 0.042, Loss x: 0.017, Loss s: 0.126, Loss w_fp: 0.007, Mask ratio: 0.828
+[2024-03-18 17:28:06,114][    INFO] Iters: 4585, Total loss: 0.042, Loss x: 0.017, Loss s: 0.126, Loss w_fp: 0.007, Mask ratio: 0.828
+[2024-03-18 17:35:51,962][    INFO] Iters: 5240, Total loss: 0.042, Loss x: 0.017, Loss s: 0.127, Loss w_fp: 0.007, Mask ratio: 0.829
+[2024-03-18 17:37:18,040][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 88.17
+[2024-03-18 17:37:18,041][    INFO] ***** Evaluation ***** >>>> Class [1 aeroplane] IoU: 75.77
+[2024-03-18 17:37:18,042][    INFO] ***** Evaluation ***** >>>> Class [2 bicycle] IoU: 53.75
+[2024-03-18 17:37:18,042][    INFO] ***** Evaluation ***** >>>> Class [3 bird] IoU: 6.32
+[2024-03-18 17:37:18,043][    INFO] ***** Evaluation ***** >>>> Class [4 boat] IoU: 60.61
+[2024-03-18 17:37:18,043][    INFO] ***** Evaluation ***** >>>> Class [5 bottle] IoU: 54.14
+[2024-03-18 17:37:18,044][    INFO] ***** Evaluation ***** >>>> Class [6 bus] IoU: 22.18
+[2024-03-18 17:37:18,044][    INFO] ***** Evaluation ***** >>>> Class [7 car] IoU: 49.69
+[2024-03-18 17:37:18,045][    INFO] ***** Evaluation ***** >>>> Class [8 cat] IoU: 59.71
+[2024-03-18 17:37:18,045][    INFO] ***** Evaluation ***** >>>> Class [9 chair] IoU: 12.49
+[2024-03-18 17:37:18,046][    INFO] ***** Evaluation ***** >>>> Class [10 cow] IoU: 42.81
+[2024-03-18 17:37:18,046][    INFO] ***** Evaluation ***** >>>> Class [11 dining table] IoU: 12.77
+[2024-03-18 17:37:18,047][    INFO] ***** Evaluation ***** >>>> Class [12 dog] IoU: 53.21
+[2024-03-18 17:37:18,047][    INFO] ***** Evaluation ***** >>>> Class [13 horse] IoU: 54.54
+[2024-03-18 17:37:18,048][    INFO] ***** Evaluation ***** >>>> Class [14 motorbike] IoU: 38.07
+[2024-03-18 17:37:18,048][    INFO] ***** Evaluation ***** >>>> Class [15 person] IoU: 72.50
+[2024-03-18 17:37:18,049][    INFO] ***** Evaluation ***** >>>> Class [16 potted plant] IoU: 38.35
+[2024-03-18 17:37:18,049][    INFO] ***** Evaluation ***** >>>> Class [17 sheep] IoU: 54.01
+[2024-03-18 17:37:18,050][    INFO] ***** Evaluation ***** >>>> Class [18 sofa] IoU: 2.40
+[2024-03-18 17:37:18,050][    INFO] ***** Evaluation ***** >>>> Class [19 train] IoU: 3.10
+[2024-03-18 17:37:18,050][    INFO] ***** Evaluation ***** >>>> Class [20 tv/monitor] IoU: 26.93
+[2024-03-18 17:37:18,051][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 41.98
+[2024-03-18 17:37:19,913][    INFO] ===========> Epoch: 14, LR: 0.00084, Previous best: 59.19
+[2024-03-18 17:37:20,887][    INFO] Iters: 0, Total loss: 0.801, Loss x: 1.583, Loss s: 0.033, Loss w_fp: 0.005, Mask ratio: 0.768
+[2024-03-18 17:45:05,224][    INFO] Iters: 655, Total loss: 0.045, Loss x: 0.019, Loss s: 0.137, Loss w_fp: 0.007, Mask ratio: 0.824
+[2024-03-18 17:52:51,158][    INFO] Iters: 1310, Total loss: 0.044, Loss x: 0.018, Loss s: 0.136, Loss w_fp: 0.007, Mask ratio: 0.829
+[2024-03-18 18:00:34,994][    INFO] Iters: 1965, Total loss: 0.043, Loss x: 0.017, Loss s: 0.134, Loss w_fp: 0.007, Mask ratio: 0.832
+[2024-03-18 18:08:19,106][    INFO] Iters: 2620, Total loss: 0.042, Loss x: 0.017, Loss s: 0.129, Loss w_fp: 0.007, Mask ratio: 0.833
+[2024-03-18 18:16:02,336][    INFO] Iters: 3275, Total loss: 0.041, Loss x: 0.016, Loss s: 0.127, Loss w_fp: 0.007, Mask ratio: 0.836
+[2024-03-18 18:23:46,637][    INFO] Iters: 3930, Total loss: 0.041, Loss x: 0.016, Loss s: 0.127, Loss w_fp: 0.007, Mask ratio: 0.835
+[2024-03-18 18:31:30,431][    INFO] Iters: 4585, Total loss: 0.041, Loss x: 0.016, Loss s: 0.127, Loss w_fp: 0.007, Mask ratio: 0.834
+[2024-03-18 18:39:14,328][    INFO] Iters: 5240, Total loss: 0.041, Loss x: 0.016, Loss s: 0.126, Loss w_fp: 0.007, Mask ratio: 0.836
+[2024-03-18 18:40:40,251][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 88.91
+[2024-03-18 18:40:40,252][    INFO] ***** Evaluation ***** >>>> Class [1 aeroplane] IoU: 59.80
+[2024-03-18 18:40:40,253][    INFO] ***** Evaluation ***** >>>> Class [2 bicycle] IoU: 52.21
+[2024-03-18 18:40:40,254][    INFO] ***** Evaluation ***** >>>> Class [3 bird] IoU: 15.66
+[2024-03-18 18:40:40,254][    INFO] ***** Evaluation ***** >>>> Class [4 boat] IoU: 49.56
+[2024-03-18 18:40:40,255][    INFO] ***** Evaluation ***** >>>> Class [5 bottle] IoU: 32.18
+[2024-03-18 18:40:40,256][    INFO] ***** Evaluation ***** >>>> Class [6 bus] IoU: 62.20
+[2024-03-18 18:40:40,256][    INFO] ***** Evaluation ***** >>>> Class [7 car] IoU: 57.61
+[2024-03-18 18:40:40,257][    INFO] ***** Evaluation ***** >>>> Class [8 cat] IoU: 5.18
+[2024-03-18 18:40:40,258][    INFO] ***** Evaluation ***** >>>> Class [9 chair] IoU: 13.12
+[2024-03-18 18:40:40,259][    INFO] ***** Evaluation ***** >>>> Class [10 cow] IoU: 60.02
+[2024-03-18 18:40:40,259][    INFO] ***** Evaluation ***** >>>> Class [11 dining table] IoU: 2.06
+[2024-03-18 18:40:40,259][    INFO] ***** Evaluation ***** >>>> Class [12 dog] IoU: 38.97
+[2024-03-18 18:40:40,260][    INFO] ***** Evaluation ***** >>>> Class [13 horse] IoU: 48.59
+[2024-03-18 18:40:40,260][    INFO] ***** Evaluation ***** >>>> Class [14 motorbike] IoU: 55.79
+[2024-03-18 18:40:40,261][    INFO] ***** Evaluation ***** >>>> Class [15 person] IoU: 75.09
+[2024-03-18 18:40:40,261][    INFO] ***** Evaluation ***** >>>> Class [16 potted plant] IoU: 36.24
+[2024-03-18 18:40:40,262][    INFO] ***** Evaluation ***** >>>> Class [17 sheep] IoU: 64.22
+[2024-03-18 18:40:40,262][    INFO] ***** Evaluation ***** >>>> Class [18 sofa] IoU: 0.44
+[2024-03-18 18:40:40,263][    INFO] ***** Evaluation ***** >>>> Class [19 train] IoU: 14.43
+[2024-03-18 18:40:40,263][    INFO] ***** Evaluation ***** >>>> Class [20 tv/monitor] IoU: 20.93
+[2024-03-18 18:40:40,263][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 40.63
+[2024-03-18 18:40:42,070][    INFO] ===========> Epoch: 15, LR: 0.00083, Previous best: 59.19
+[2024-03-18 18:40:43,041][    INFO] Iters: 0, Total loss: 0.062, Loss x: 0.025, Loss s: 0.189, Loss w_fp: 0.008, Mask ratio: 0.817
+[2024-03-18 18:48:27,523][    INFO] Iters: 655, Total loss: 0.043, Loss x: 0.016, Loss s: 0.132, Loss w_fp: 0.007, Mask ratio: 0.837
+[2024-03-18 18:56:12,426][    INFO] Iters: 1310, Total loss: 0.042, Loss x: 0.018, Loss s: 0.127, Loss w_fp: 0.007, Mask ratio: 0.838
+[2024-03-18 19:03:57,205][    INFO] Iters: 1965, Total loss: 0.041, Loss x: 0.018, Loss s: 0.122, Loss w_fp: 0.007, Mask ratio: 0.835
+[2024-03-18 19:11:41,866][    INFO] Iters: 2620, Total loss: 0.041, Loss x: 0.017, Loss s: 0.123, Loss w_fp: 0.007, Mask ratio: 0.836
+[2024-03-18 19:19:25,670][    INFO] Iters: 3275, Total loss: 0.041, Loss x: 0.017, Loss s: 0.122, Loss w_fp: 0.007, Mask ratio: 0.837
+[2024-03-18 19:27:09,124][    INFO] Iters: 3930, Total loss: 0.041, Loss x: 0.018, Loss s: 0.123, Loss w_fp: 0.007, Mask ratio: 0.836
+[2024-03-18 19:34:54,256][    INFO] Iters: 4585, Total loss: 0.042, Loss x: 0.018, Loss s: 0.124, Loss w_fp: 0.007, Mask ratio: 0.835
+[2024-03-18 19:42:38,761][    INFO] Iters: 5240, Total loss: 0.042, Loss x: 0.017, Loss s: 0.125, Loss w_fp: 0.007, Mask ratio: 0.833
+[2024-03-18 19:44:04,562][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 89.29
+[2024-03-18 19:44:04,563][    INFO] ***** Evaluation ***** >>>> Class [1 aeroplane] IoU: 65.05
+[2024-03-18 19:44:04,563][    INFO] ***** Evaluation ***** >>>> Class [2 bicycle] IoU: 55.40
+[2024-03-18 19:44:04,564][    INFO] ***** Evaluation ***** >>>> Class [3 bird] IoU: 45.60
+[2024-03-18 19:44:04,564][    INFO] ***** Evaluation ***** >>>> Class [4 boat] IoU: 65.09
+[2024-03-18 19:44:04,564][    INFO] ***** Evaluation ***** >>>> Class [5 bottle] IoU: 10.26
+[2024-03-18 19:44:04,565][    INFO] ***** Evaluation ***** >>>> Class [6 bus] IoU: 51.56
+[2024-03-18 19:44:04,565][    INFO] ***** Evaluation ***** >>>> Class [7 car] IoU: 55.00
+[2024-03-18 19:44:04,565][    INFO] ***** Evaluation ***** >>>> Class [8 cat] IoU: 2.64
+[2024-03-18 19:44:04,566][    INFO] ***** Evaluation ***** >>>> Class [9 chair] IoU: 16.27
+[2024-03-18 19:44:04,566][    INFO] ***** Evaluation ***** >>>> Class [10 cow] IoU: 43.27
+[2024-03-18 19:44:04,566][    INFO] ***** Evaluation ***** >>>> Class [11 dining table] IoU: 1.39
+[2024-03-18 19:44:04,567][    INFO] ***** Evaluation ***** >>>> Class [12 dog] IoU: 49.24
+[2024-03-18 19:44:04,567][    INFO] ***** Evaluation ***** >>>> Class [13 horse] IoU: 56.81
+[2024-03-18 19:44:04,568][    INFO] ***** Evaluation ***** >>>> Class [14 motorbike] IoU: 35.15
+[2024-03-18 19:44:04,568][    INFO] ***** Evaluation ***** >>>> Class [15 person] IoU: 74.22
+[2024-03-18 19:44:04,568][    INFO] ***** Evaluation ***** >>>> Class [16 potted plant] IoU: 23.45
+[2024-03-18 19:44:04,569][    INFO] ***** Evaluation ***** >>>> Class [17 sheep] IoU: 60.92
+[2024-03-18 19:44:04,569][    INFO] ***** Evaluation ***** >>>> Class [18 sofa] IoU: 4.48
+[2024-03-18 19:44:04,569][    INFO] ***** Evaluation ***** >>>> Class [19 train] IoU: 8.79
+[2024-03-18 19:44:04,570][    INFO] ***** Evaluation ***** >>>> Class [20 tv/monitor] IoU: 21.82
+[2024-03-18 19:44:04,570][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 39.80
+[2024-03-18 19:44:06,421][    INFO] ===========> Epoch: 16, LR: 0.00082, Previous best: 59.19
+[2024-03-18 19:44:07,400][    INFO] Iters: 0, Total loss: 0.009, Loss x: 0.012, Loss s: 0.008, Loss w_fp: 0.003, Mask ratio: 0.983

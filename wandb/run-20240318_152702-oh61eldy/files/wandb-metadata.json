@@ -1,0 +1,98 @@
+{
+    "os": "Linux-5.15.0-100-generic-x86_64-with-glibc2.31",
+    "python": "3.10.13",
+    "heartbeatAt": "2024-03-18T18:27:03.837198",
+    "startedAt": "2024-03-18T18:27:02.831356",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--config=configs/pascal.yaml",
+        "--labeled-id-path",
+        "splits/pascal/92/labeled.txt",
+        "--unlabeled-id-path",
+        "splits/pascal/92/unlabeled.txt",
+        "--save-path",
+        "exp/pascal/unimatch/r101/92",
+        "--port",
+        "20023"
+    ],
+    "state": "running",
+    "program": "/home/pdi/EduardoLawson/Unimeu/UniMatch/unimatch.py",
+    "codePathLocal": "unimatch.py",
+    "codePath": "unimatch.py",
+    "git": {
+        "remote": "https://github.com/EduardoLawson1/UniMatch.git",
+        "commit": "7e677116949b8c026680e49caa79ae3a6607a037"
+    },
+    "email": "gustavo.pereira2146@gmail.com",
+    "root": "/home/pdi/EduardoLawson/Unimeu/UniMatch",
+    "host": "pdi-desktop",
+    "username": "pdi",
+    "executable": "/home/pdi/anaconda3/envs/unimatch/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1638.977625,
+        "min": 1600.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1800.0,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1711.821,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1600.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1600.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 878.6833457946777,
+            "used": 266.9542007446289
+        }
+    },
+    "gpu": "NVIDIA TITAN X (Pascal)",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA TITAN X (Pascal)",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 15.563835144042969
+    }
+}
