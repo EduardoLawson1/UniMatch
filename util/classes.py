@@ -5,7 +5,9 @@ CLASSES = {'pascal': ['background', 'aeroplane', 'bicycle', 'bird', 'boat', 'bot
            'cityscapes': ['road', 'sidewalk', 'building', 'wall', 'fence', 'pole', 'traffic light',
                           'traffic sign', 'vegetation', 'terrain', 'sky', 'person', 'rider', 'car',
                           'truck', 'bus', 'train', 'motorcycle', 'bicycle'],
-           
+           #novo
+           'suim': ['pipe', 'background'],
+
            'coco': ['void', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 
                     'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 
                     'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra',
