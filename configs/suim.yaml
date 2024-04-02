@@ -1,7 +1,7 @@
 #argumentos para o dataset
 nclass: 2
 crop_size: 321
-data_root: data/subpipe  #arrumar isso]
+data_root: data/SUIM_total
 
 #argumentos para o treino
 epochs: 80
